@@ -1,1 +1,1 @@
-{"scripts":{"build":"mkdir -p dist && cp index.html dist/index.html"}}
+{"scripts":{"build":"mkdir -p dist/app-preview && cp index.html dist/index.html && cp app-preview/index.html dist/app-preview/index.html"}}
