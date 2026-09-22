@@ -1,19 +1,388 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Sylverra — Adotta un albero reale</title><meta name="theme-color" content="#f3f1e9">
-<style>
-:root{--ink:#10251c;--soft:#66756d;--paper:#f3f1e9;--white:#fff;--lime:#dff56a;--line:#d8ddd7;--dark:#10251c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}button{font:inherit}
-.shell{max-width:1280px;margin:auto;padding:0 28px}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;position:absolute;z-index:5;left:0;right:0;color:white}.brand{font-weight:850;letter-spacing:.18em;font-size:15px}.navRight{display:flex;gap:12px;align-items:center}.ghost{padding:11px 16px;border:1px solid #ffffff4d;border-radius:99px;font-size:13px}.cta{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:99px;background:var(--lime);color:var(--dark);font-weight:760;padding:15px 22px;cursor:pointer;transition:.2s}.cta:hover{transform:translateY(-2px)}.hero{min-height:92vh;position:relative;display:flex;align-items:flex-end;color:white;background:linear-gradient(180deg,#07130b1a 15%,#07130be8 100%),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=88') center/cover}.heroContent{padding:150px 28px 76px;max-width:1280px;margin:auto;width:100%}.kicker{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:800;opacity:.8}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(54px,8vw,112px);letter-spacing:-.055em;line-height:.88;max-width:1050px;margin:18px 0 28px}.hero p{font-size:18px;line-height:1.55;max-width:580px;color:#e7ece8;margin:0 0 28px}.heroFoot{display:flex;gap:26px;align-items:center;flex-wrap:wrap}.trust{font-size:13px;color:#dbe3de}.section{padding:100px 0}.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:#718077}.section h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(42px,5vw,72px);letter-spacing:-.04em;line-height:1;margin:12px 0 0}.intro p{font-size:18px;line-height:1.65;color:var(--soft);max-width:620px;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}.step{background:#fff;border-radius:26px;padding:28px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}.stepNo{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:12px}.step h3{font-size:22px;margin:32px 0 8px}.step p{color:var(--soft);line-height:1.5;margin:0}.experience{background:var(--dark);color:white;padding:100px 0}.chooser{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:42px}.mapCard{min-height:610px;border-radius:30px;position:relative;overflow:hidden;background:linear-gradient(180deg,#0b1a1020,#0b1a10cc),url('https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=1500&q=85') center/cover}.mapLabel{position:absolute;top:24px;left:24px;background:#ffffffed;color:var(--dark);padding:11px 15px;border-radius:99px;font-size:12px;font-weight:700}.pin{position:absolute;left:54%;top:47%;width:66px;height:66px;border-radius:50%;background:var(--lime);color:var(--dark);display:grid;place-items:center;font-weight:850;box-shadow:0 0 0 18px #dff56a2b}.mapBottom{position:absolute;left:28px;right:28px;bottom:28px}.mapBottom h3{font-family:Georgia,serif;font-size:42px;font-weight:400;margin:0 0 8px}.mapBottom p{margin:0;color:#dce6df}.choice{background:#f7f7f2;color:var(--dark);border-radius:30px;padding:30px;display:flex;flex-direction:column}.availability{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700}.dot{width:8px;height:8px;border-radius:50%;background:#4d9d62}.species{margin:30px 0;padding-top:24px;border-top:1px solid var(--line)}.species h3{font-family:Georgia,serif;font-weight:400;font-size:38px;margin:6px 0}.latin{color:var(--soft);font-style:italic}.species p{color:var(--soft);line-height:1.6}.price{margin-top:auto;display:flex;justify-content:space-between;align-items:end;padding:22px 0}.price strong{font-size:38px;letter-spacing:-.04em}.price span{font-size:12px;color:var(--soft)}.wide{width:100%}.purchase{background:#fff;padding:100px 0}.buyGrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.packs{display:grid;gap:12px;margin-top:32px}.pack{border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;background:white}.pack.active{border:2px solid var(--dark);padding:19px}.pack b{font-size:17px}.pack small{display:block;color:var(--soft);margin-top:4px}.radio{width:20px;height:20px;border-radius:50%;border:1px solid #9ca9a2}.active .radio{border:6px solid var(--dark)}.summary{background:var(--paper);border-radius:28px;padding:30px;position:sticky;top:20px}.row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}.total{display:flex;justify-content:space-between;align-items:end;padding:24px 0}.total strong{font-size:34px}.total small{color:var(--soft)}.note{font-size:12px;color:var(--soft);line-height:1.5;margin-top:14px}.after{padding:100px 0}.phone{max-width:380px;margin:45px auto 0;background:#101b16;border-radius:46px;padding:12px;box-shadow:0 30px 70px #17302426}.screen{background:#f7f7f2;border-radius:36px;overflow:hidden;min-height:620px}.treePhoto{height:270px;background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=85') center/cover;position:relative}.treePhoto span{position:absolute;left:18px;top:18px;background:#fff;padding:8px 11px;border-radius:99px;font-size:11px}.screenBody{padding:24px}.screenBody h3{font-family:Georgia,serif;font-size:34px;font-weight:400;margin:4px 0}.screenBody p{color:var(--soft);line-height:1.55}.mini{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}.mini div{background:white;border-radius:16px;padding:14px;font-size:12px}.footer{padding:40px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--soft)}
-@media(max-width:800px){.shell{padding:0 18px}.nav{height:68px}.ghost{display:none}.heroContent{padding:130px 18px 48px}.hero{min-height:86vh}.hero h1{font-size:58px}.section,.experience,.purchase,.after{padding:70px 0}.intro,.chooser,.buyGrid{grid-template-columns:1fr;gap:28px}.steps{grid-template-columns:1fr}.mapCard{min-height:480px}.choice{min-height:430px}.summary{position:static}.footer{gap:20px;flex-direction:column}}
-</style></head><body>
-<nav class="nav shell"><div class="brand">SYLVERRA</div><div class="navRight"><a class="ghost" href="#after">I miei alberi</a><a class="cta" href="#choose">Scegli il tuo albero</a></div></nav>
-<header class="hero"><div class="heroContent"><div class="kicker">Adozione alberi · luoghi reali</div><h1>Il tuo albero.<br>Un luogo reale.<br>Una storia che cresce.</h1><p>Scegli un albero in un territorio Sylverra, adottalo e seguilo nel tempo. Un gesto concreto che resta legato a un luogo.</p><div class="heroFoot"><a class="cta" href="#choose">Scegli il tuo albero →</a><span class="trust">Da €25/anno · impegno minimo 3 anni</span></div></div></header>
-<main>
-<section class="section"><div class="shell"><div class="intro"><div><div class="eyebrow">Come funziona</div><h2>Dalla scelta alla tua storia.</h2></div><p>Prima scegli il luogo, poi la specie e quanti alberi vuoi adottare. Dopo l'adozione, il tuo albero entra nella tua area personale con posizione, aggiornamenti e documenti.</p></div><div class="steps"><article class="step"><span class="stepNo">01</span><div><h3>Scegli il luogo</h3><p>Entra in un territorio Sylverra reale e scopri il progetto.</p></div></article><article class="step"><span class="stepNo">02</span><div><h3>Scegli l'albero</h3><p>Specie, disponibilità e prezzo sono chiari prima dell'acquisto.</p></div></article><article class="step"><span class="stepNo">03</span><div><h3>Seguilo nel tempo</h3><p>Foto, posizione, storia e documenti in un'unica esperienza.</p></div></article></div></div></section>
-<section class="experience" id="choose"><div class="shell"><div class="eyebrow" style="color:#a9b8b0">Scegli il territorio</div><h2>Ferrara. Il primo luogo Sylverra.</h2><div class="chooser"><div class="mapCard"><div class="mapLabel">Italia · Emilia-Romagna</div><div class="pin">FE</div><div class="mapBottom"><h3>First Sylverra Land Plot</h3><p>Ferrara · Italia</p></div></div><aside class="choice"><div class="availability"><span class="dot"></span>100 posti disponibili</div><div class="species"><div class="eyebrow">Specie disponibile</div><h3>Pioppo</h3><div class="latin">Populus</div><p>Un albero legato al paesaggio della pianura, selezionato per il primo lotto Sylverra.</p></div><div class="price"><div><strong>€25</strong><br><span>per albero / anno</span></div><span>min. 3 anni</span></div><a class="cta wide" href="#adopt">Scegli questo luogo →</a></aside></div></div></section>
-<section class="purchase" id="adopt"><div class="shell buyGrid"><div><div class="eyebrow">La tua adozione</div><h2>Quanti alberi vuoi far crescere?</h2><div class="packs"><div class="pack active" data-n="1"><div><b>1 albero</b><small>Un gesto personale</small></div><div class="radio"></div></div><div class="pack" data-n="3"><div><b>3 alberi</b><small>Un piccolo gruppo</small></div><div class="radio"></div></div><div class="pack" data-n="10"><div><b>10 alberi</b><small>Un impatto più visibile</small></div><div class="radio"></div></div></div></div><aside class="summary"><div class="eyebrow">Riepilogo</div><div class="row"><span>Territorio</span><b>Ferrara</b></div><div class="row"><span>Specie</span><b>Pioppo</b></div><div class="row"><span>Alberi</span><b id="qty">1</b></div><div class="row"><span>Durata minima</span><b>3 anni</b></div><div class="total"><div><small>Totale minimo</small><br><strong id="total">€75</strong></div><small>€25/albero/anno</small></div><button class="cta wide" type="button" onclick="alert('Checkout Sylverra: collegamento al pagamento in attivazione.')">Continua con l'adozione →</button><p class="note">Prima del pagamento inserirai solo i dati necessari. L'account personale viene attivato dopo l'adozione.</p></aside></div></section>
-<section class="after" id="after"><div class="shell"><div style="text-align:center;max-width:720px;margin:auto"><div class="eyebrow">Dopo l'adozione</div><h2>Il tuo albero diventa una storia da seguire.</h2></div><div class="phone"><div class="screen"><div class="treePhoto"><span>● Attivo</span></div><div class="screenBody"><div class="eyebrow">Il mio albero</div><h3>Pioppo #10100</h3><p>Ferrara · First Sylverra Land Plot</p><div class="mini"><div><b>Posizione</b><br>Vedi il luogo</div><div><b>Timeline</b><br>Segui la crescita</div><div><b>Personalizza</b><br>Nome e dedica</div><div><b>Documenti</b><br>Certificati</div></div></div></div></div></div></section>
-</main><footer class="footer shell"><b>SYLVERRA</b><span>Luoghi reali. Alberi reali. Storie che crescono.</span><span>© 2026 Sylverra</span></footer>
-<script>document.querySelectorAll('.pack').forEach(p=>p.onclick=()=>{document.querySelectorAll('.pack').forEach(x=>x.classList.remove('active'));p.classList.add('active');const n=+p.dataset.n;document.getElementById('qty').textContent=n;document.getElementById('total').textContent='€'+(n*25*3).toLocaleString('it-IT')})</script>
-<!-- deploy-trigger: sylverra-app 2026-09-22 -->\n</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sylverra — Mobile Smooth Preview</title>
+  <meta name="description" content="Adopt real trees, restore land and fund long-term stewardship." />
+  <style>
+    :root{
+      --bg:#08110D; --card:rgba(255,255,255,.06); --line:rgba(255,255,255,.12);
+      --text:#fff; --muted:#b8c3bd; --green:#6ee7b7;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1180px,100%);margin:auto;padding:0 20px}
+    .top{
+      position:sticky;top:0;z-index:20;background:rgba(8,17,13,.92);
+      border-bottom:1px solid var(--line);backdrop-filter:blur(10px)
+    }
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .mark{width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+    .logo{font-weight:850;letter-spacing:.16em}.tag{font-size:9px;color:#93a39a;letter-spacing:.22em;text-transform:uppercase}
+    .navlinks{display:flex;gap:18px;font-size:13px;color:#d7ddd9}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:750;border:1px solid var(--line);background:#fff;color:#08110D}
+    .btn.dark{background:transparent;color:#fff}.btn.green{background:var(--green);color:#08110D}
+    .hero{padding:56px 0 62px;background:
+      radial-gradient(circle at 20% 0%,rgba(110,231,183,.18),transparent 34%),
+      radial-gradient(circle at 90% 10%,rgba(125,211,252,.10),transparent 30%)}
+    .heroGrid{display:grid;grid-template-columns:1.12fr .88fr;gap:36px;align-items:center}
+    .pill{display:inline-flex;border:1px solid rgba(110,231,183,.22);background:rgba(110,231,183,.10);color:#dffcef;border-radius:999px;padding:9px 13px;text-transform:uppercase;font-size:11px;letter-spacing:.2em}
+    h1{font-size:clamp(45px,7vw,88px);line-height:.94;letter-spacing:-.055em;margin:22px 0 0}
+    h1 span{display:block;color:var(--green)}
+    .lead{font-size:18px;line-height:1.65;color:#d2dbd6;max-width:700px;margin:24px 0 0}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:34px}
+    .metric{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:16px;transform:translateZ(0)}
+    .metric b{display:block;font-size:24px}.metric span{display:block;color:#aeb9b3;font-size:12px;line-height:1.45;margin-top:4px}
+    .photo{height:560px;border-radius:30px;border:1px solid var(--line);overflow:hidden;background:#102018;position:relative}
+    .photo:before{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(8,17,13,.05),rgba(8,17,13,.86)),
+      url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1100&q=70') center/cover;
+    }
+    .glass{position:absolute;left:18px;right:18px;bottom:18px;border:1px solid var(--line);background:rgba(0,0,0,.34);backdrop-filter:blur(9px);border-radius:22px;padding:18px;line-height:1.55;color:#edf7f1}
+    section{padding:64px 0}.eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:.24em;font-size:11px;font-weight:850}
+    h2{font-size:clamp(32px,4vw,54px);line-height:1.05;letter-spacing:-.04em;margin:14px 0 16px}.body{max-width:800px;color:#c4cec8;font-size:17px;line-height:1.68}
+    .cards,.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .card,.panel,.proj{border:1px solid var(--line);background:var(--card);border-radius:26px}
+    .card,.panel{padding:24px}.card h3{font-size:22px;margin:0 0 10px}.card p,.proj p{color:#bdc7c1;line-height:1.6;margin:0}
+    .split,.calc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{display:grid;gap:10px;margin-top:22px}.item{border:1px solid var(--line);border-radius:18px;background:rgba(0,0,0,.18);padding:14px}
+    .range{width:100%;accent-color:var(--green);margin:24px 0}.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.num{border:1px solid var(--line);background:rgba(0,0,0,.22);border-radius:20px;padding:18px}.num small{color:#95a29b;text-transform:uppercase;letter-spacing:.14em}.num b{display:block;font-size:30px;margin-top:8px}
+    .proj{overflow:hidden}.projImg{height:230px;background-size:cover;background-position:center}.projTxt{padding:20px}
+    footer{border-top:1px solid var(--line);padding:38px 0;color:#aeb9b3;font-size:13px}
+
+    .mapSection{padding:72px 0}
+    .mapGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch;margin-top:30px}
+    #sylverraMap{min-height:520px;border-radius:30px;border:1px solid var(--line);overflow:hidden;background:#102018}
+    .mapInfo{border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:30px;padding:26px}
+    .mapInfo h3{font-size:28px;margin:0 0 14px}
+    .mapInfo p{color:#c4cec8;line-height:1.65;margin:0 0 14px}
+    .treeTag{margin-top:18px;border:1px solid rgba(110,231,183,.22);background:rgba(110,231,183,.08);border-radius:24px;padding:20px}
+    .tagPreview{margin-top:14px;border:1px solid var(--line);background:#f8fafc;color:#08110D;border-radius:18px;padding:16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .tagPreview b{display:block;font-size:20px;letter-spacing:.08em}
+    .tagRows{display:grid;gap:10px;margin-top:18px}
+    .tagRow{border:1px solid var(--line);background:rgba(0,0,0,.20);border-radius:18px;padding:14px;color:#d7ddd9;font-size:14px;line-height:1.5}
+    @media(max-width:900px){.mapGrid{grid-template-columns:1fr}#sylverraMap{min-height:430px}}
+
+
+    .scienceWrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;align-items:start;margin-top:32px}
+    .scienceAside{position:sticky;top:92px;border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:28px;padding:24px}
+    .scienceAside h3{font-size:26px;margin:0 0 12px}
+    .scienceAside p{color:#c4cec8;line-height:1.65;margin:0 0 14px}
+    .sourceNote{font-size:12px;color:#96a39b;line-height:1.55;margin-top:16px}
+    .scienceGrid{display:grid;gap:16px}
+    .scienceCard{border:1px solid var(--line);background:rgba(255,255,255,.052);border-radius:28px;padding:24px}
+    .scienceCard h3{font-size:24px;margin:0 0 10px}
+    .scienceCard p{color:#c4cec8;line-height:1.65;margin:0}
+    .bars{display:grid;gap:12px;margin-top:18px}
+    .barRow{display:grid;grid-template-columns:135px 1fr 90px;gap:12px;align-items:center;font-size:13px;color:#d7ddd9}
+    .barTrack{height:14px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+    .barFill{height:100%;border-radius:999px;background:linear-gradient(90deg,#6ee7b7,#7dd3fc)}
+    .miniCharts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+    .donut{width:138px;height:138px;border-radius:50%;background:conic-gradient(#6ee7b7 0 65%,rgba(255,255,255,.12) 65% 100%);display:grid;place-items:center;margin:8px auto}
+    .donut span{width:86px;height:86px;border-radius:50%;background:#08110D;display:grid;place-items:center;font-size:24px;font-weight:850}
+    .formula{border:1px solid rgba(110,231,183,.18);background:rgba(110,231,183,.08);border-radius:22px;padding:18px;margin-top:16px;color:#eafff6;line-height:1.65}
+    .countryTable{width:100%;border-collapse:collapse;margin-top:16px;overflow:hidden;border-radius:18px}
+    .countryTable th,.countryTable td{padding:12px;border-bottom:1px solid var(--line);font-size:13px;text-align:left}
+    .countryTable th{color:#9fb0a7;text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+    .countryTable td:last-child{font-weight:800;color:#fff}
+    .warningBox{margin-top:16px;border:1px solid rgba(245,158,11,.20);background:rgba(245,158,11,.07);border-radius:20px;padding:16px;color:#fef3c7;line-height:1.6}
+    @media(max-width:900px){.scienceWrap{grid-template-columns:1fr}.scienceAside{position:relative;top:auto}.miniCharts{grid-template-columns:1fr}.barRow{grid-template-columns:95px 1fr 70px}}
+
+
+    .partners{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}
+    .partner{min-height:120px;border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:24px;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
+    .wordmark{font-weight:850;letter-spacing:.04em;font-size:20px}
+    .wordmark.crea{color:#86efac}.wordmark.bilab{color:#dbeafe}.wordmark.revolu{color:#f5d0fe}.wordmark.invest{color:#fde68a}.wordmark.shin{color:#bfdbfe}.wordmark.icon{color:#c7d2fe}
+    .partner small{display:block;margin-top:12px;color:#aeb9b3;line-height:1.45}
+    .supportClosing{margin-top:24px;color:#d7ddd9;border:1px solid var(--line);background:rgba(0,0,0,.18);border-radius:22px;padding:18px;line-height:1.6}
+    @media(max-width:1100px){.partners{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:900px){.partners{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.partners{grid-template-columns:1fr}.partner{min-height:105px}}
+
+    @media(max-width:900px){
+      .navlinks{display:none}.hero{padding-top:42px}.heroGrid,.split,.calc{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}
+      .cards,.projects{grid-template-columns:1fr}.photo{height:420px}section{padding:48px 0}
+      .wrap{padding:0 16px}.numbers{grid-template-columns:1fr}h1{font-size:52px}
+    }
+    @media(max-width:520px){
+      .btn{width:100%;padding:14px 18px}.actions{width:100%}.metric{padding:14px}.photo{height:370px}
+      h1{font-size:46px}.lead{font-size:16px}.top{position:relative}.nav{height:66px}
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <div class="top"><div class="wrap nav">
+    <div class="brand"><div class="mark">🌿</div><div><div class="logo">SYLVERRA</div><div class="tag">Grow the Planet Back</div></div></div>
+    <div class="navlinks"><a href="#about">About</a><a href="#how">How</a><a href="#companies">Companies</a><a href="#adopt">Adopt</a><a href="#projects">Projects</a></div>
+    <a class="btn" href="#adopt">Adopt</a>
+  </div></div>
+
+  <header class="hero"><div class="wrap heroGrid">
+    <div>
+      <div class="pill">Reforestation platform</div>
+      <h1>The planet needs <span>forests again.</span> We grow them back.</h1>
+      <p class="lead">Adopt real trees. Restore real land. Fund their growth through long-term stewardship. Each tree costs <b>€25 per year all-inclusive</b>.</p>
+      <div class="actions"><a class="btn" href="#adopt">Adopt a Tree</a><a class="btn dark" href="#companies">Corporate ESG</a></div>
+      <div class="metrics">
+        <div class="metric"><b>€25</b><span>tree / year</span></div>
+        <div class="metric"><b>1</b><span>tree to start</span></div>
+        <div class="metric"><b>1,000+</b><span>corporate scale</span></div>
+        <div class="metric"><b>3 years</b><span>minimum term</span></div>
+        <div class="metric"><b>Global</b><span>vision</span></div>
+      </div>
+    </div>
+    <div class="photo"><div class="glass"><b>Verified adoption</b><br>Each adopted tree is real, maintained, and physically identified with the adopter’s name.</div></div>
+  </div></header>
+
+  <main>
+    <section id="about"><div class="wrap">
+      <div class="eyebrow">Why Sylverra</div>
+      <h2>A premium environmental initiative built on substance.</h2>
+      <p class="body">Sylverra organizes real tree planting, real land stewardship and long-term care with a level of clarity strong enough for companies and personal enough for individuals.</p>
+      <div class="cards">
+        <div class="card"><h3>Real land. Real trees.</h3><p>Managed land, planted trees, followed over time.</p></div>
+        <div class="card"><h3>Verified adoption.</h3><p>Each tree carries the adopter’s name.</p></div>
+        <div class="card"><h3>Credible stewardship.</h3><p>Maintenance through multi-year contracts.</p></div>
+      </div>
+    </div></section>
+
+    
+
+<section id="land-map" class="mapSection"><div class="wrap">
+  <div class="eyebrow">First Land Plot</div>
+  <h2>The first Sylverra plot, shown on a real zoomable satellite map.</h2>
+  <p class="body">This is the first land reference point for the project. The map is interactive: you can zoom, move and inspect the surrounding area. In production, this section can evolve into a full traceability map with every planted tree and every adopter.</p>
+
+  <div class="mapGrid">
+    <div id="sylverraMap" aria-label="Satellite map of first Sylverra land plot"></div>
+
+    <div class="mapInfo">
+      <h3>First Sylverra Land Plot</h3>
+      <p><b>Coordinates:</b><br>44.780351, 11.586586</p>
+      <p>Every adopted tree will be physically identified on site. The tree will carry a durable band showing both the progressive tree number and the name of the adopter.</p>
+
+      <div class="treeTag">
+        <div class="eyebrow">Tree identity system</div>
+        <div class="tagPreview">
+          <b>SYLVERRA TREE</b>
+          ID: SVR-0001<br>
+          Adopted by: Mario Rossi<br>
+          Plot: IT-FE-001
+        </div>
+      </div>
+
+      <div class="tagRows">
+        <div class="tagRow"><b>Progressive number</b><br>Each tree receives a unique code, for example SVR-0001.</div>
+        <div class="tagRow"><b>Adopter name</b><br>The physical band carries the name of the individual, family or company adopting the tree.</div>
+        <div class="tagRow"><b>Future traceability</b><br>The same code can later connect to a public digital page with species, planting date, GPS area and yearly updates.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+
+<section id="science"><div class="wrap">
+  <div class="eyebrow">Scientific Dossier</div>
+  <h2>Why trees matter — and why they are not magic.</h2>
+  <p class="body">This section gives Sylverra a scientific spine: climate context, deforestation scale, biological mechanism and a sober estimate of how many trees would be needed to balance national-scale emissions. The message is strong because it is honest.</p>
+
+  <div class="scienceWrap">
+    <aside class="scienceAside">
+      <h3>The brutal summary</h3>
+      <p><b>Climate change is already measurable.</b> The IPCC reports that human activities have caused global surface temperature to reach about 1.1°C above 1850–1900 levels in 2011–2020.</p>
+      <p><b>Deforestation is massive.</b> FAO estimates about 420 million hectares of forest have been lost through deforestation since 1990.</p>
+      <p><b>Trees help in three ways:</b> they absorb CO₂ through photosynthesis, store carbon in biomass and soils, and cool local areas through shade and evapotranspiration.</p>
+      <div class="warningBox">Important: tree planting does not replace emission reduction. It complements it. Selling trees as a miracle cure is greenwashing dressed as gardening.</div>
+      <div class="sourceNote">Data basis: IPCC AR6, FAO FRA 2020, Global Carbon Project, USDA/Arbor Day estimate, EEA urban cooling research. Values are simplified for website communication and should be refined before formal ESG reporting.</div>
+    </aside>
+
+    <div class="scienceGrid">
+      <div class="scienceCard">
+        <h3>Global warming: the baseline</h3>
+        <p>The key climate fact is not poetic: it is numeric. Human-caused warming has already moved the global system beyond the pre-industrial baseline.</p>
+        <div class="bars">
+          <div class="barRow"><span>1850–1900</span><div class="barTrack"><div class="barFill" style="width:0%"></div></div><b>0°C</b></div>
+          <div class="barRow"><span>2011–2020</span><div class="barTrack"><div class="barFill" style="width:73%"></div></div><b>+1.1°C</b></div>
+          <div class="barRow"><span>1.5°C limit</span><div class="barTrack"><div class="barFill" style="width:100%"></div></div><b>+1.5°C</b></div>
+        </div>
+      </div>
+
+      <div class="scienceCard">
+        <h3>Deforestation since modern monitoring</h3>
+        <p>FAO’s global assessment estimates 420 million hectares of forest lost through deforestation since 1990. That is not a communication problem. It is a land-system problem.</p>
+        <div class="miniCharts">
+          <div>
+            <div class="donut"><span>420M</span></div>
+            <p style="text-align:center">hectares lost since 1990</p>
+          </div>
+          <div>
+            <div class="donut" style="background:conic-gradient(#7dd3fc 0 55%,rgba(255,255,255,.12) 55% 100%)"><span>10M</span></div>
+            <p style="text-align:center">ha/year deforestation rate, 2015–2020 estimate</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scienceCard">
+        <h3>Why more trees means more oxygen and less heat</h3>
+        <p>Through photosynthesis, trees use light energy to convert CO₂ and water into sugars, releasing oxygen as a by-product. The climate benefit is mainly carbon storage and cooling, not because the atmosphere is short of oxygen.</p>
+        <div class="formula">
+          CO₂ + H₂O + sunlight → plant biomass + O₂<br>
+          More mature tree canopy → more shade + evapotranspiration → lower local surface and air temperatures.
+        </div>
+      </div>
+
+      <div class="scienceCard">
+        <h3>Country-scale tree requirement: reality check</h3>
+        <p>Using a simple mature-tree estimate of <b>22 kg CO₂/year</b> per tree, the number of trees needed to offset an entire country’s annual territorial fossil CO₂ emissions becomes enormous. This is why Sylverra should communicate contribution, not fantasy.</p>
+        <table class="countryTable">
+          <thead><tr><th>Country</th><th>Approx. annual CO₂</th><th>Trees needed / year</th></tr></thead>
+          <tbody>
+            <tr><td>Germany</td><td>~670 Mt CO₂</td><td>~30.5 billion</td></tr>
+            <tr><td>Italy</td><td>~330 Mt CO₂</td><td>~15.0 billion</td></tr>
+            <tr><td>France</td><td>~300 Mt CO₂</td><td>~13.6 billion</td></tr>
+            <tr><td>Spain</td><td>~240 Mt CO₂</td><td>~10.9 billion</td></tr>
+            <tr><td>Netherlands</td><td>~140 Mt CO₂</td><td>~6.4 billion</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="scienceCard">
+        <h3>What Sylverra can honestly claim</h3>
+        <div class="bars">
+          <div class="barRow"><span>Carbon</span><div class="barTrack"><div class="barFill" style="width:82%"></div></div><b>High</b></div>
+          <div class="barRow"><span>Cooling</span><div class="barTrack"><div class="barFill" style="width:74%"></div></div><b>High</b></div>
+          <div class="barRow"><span>Biodiversity</span><div class="barTrack"><div class="barFill" style="width:67%"></div></div><b>Strong</b></div>
+          <div class="barRow"><span>Full offset</span><div class="barTrack"><div class="barFill" style="width:18%"></div></div><b>Careful</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+
+    <section id="how"><div class="wrap">
+      <div class="eyebrow">How it works</div>
+      <h2>A simple model. A serious commitment.</h2>
+      <div class="cards">
+        <div class="card"><h3>1. Choose</h3><p>From one tree to thousands.</p></div>
+        <div class="card"><h3>2. Plant</h3><p>On selected managed land starting in Italy.</p></div>
+        <div class="card"><h3>3. Maintain</h3><p>Minimum three-year stewardship.</p></div>
+      </div>
+    </div></section>
+
+
+    
+<section id="chosen"><div class="wrap">
+  <div class="eyebrow">Founding Corporate Supporters</div>
+  <h2>A serious initiative needs serious early supporters.</h2>
+  <p class="body">Sylverra was created with the support of a network of entrepreneurs, technology companies, industrial innovators and long-term investors who believe that environmental regeneration should be measurable, transparent and built to last.</p>
+  <div class="partners">
+    <div class="partner"><div><div class="wordmark crea">CREA SOLUTION</div><small>Fashion technology, CAD/CAM, PLM and industrial digitalization.</small></div></div>
+    <div class="partner"><div><div class="wordmark bilab">BI.LAB</div><small>Industrial engineering, robotics, laser technology and advanced automation.</small></div></div>
+    <div class="partner"><div><div class="wordmark revolu">REVOLUFASHION</div><small>Fashion innovation, sustainability and next-generation manufacturing initiatives.</small></div></div>
+    <div class="partner"><div><div class="wordmark invest">INVESTINDUSTRY</div><small>Strategic real estate investments and property development initiatives.</small></div></div>
+    <div class="partner"><div><div class="wordmark shin">SHIN SOFTWARE</div><small>Interactive 3D, AR, VR, XR and digital experience technology.</small></div></div>
+    <div class="partner"><div><div class="wordmark icon">ICON CAPITAL</div><small>Building long-term value through strategic investments in technology, industry and innovation.</small></div></div>
+  </div>
+  <div class="supportClosing">A growing network of companies committed to innovation, responsible growth and measurable environmental impact.</div>
+</div></section>
+
+
+
+    <section id="companies"><div class="wrap split">
+      <div class="panel"><div class="eyebrow">Corporate ESG</div><h2>Visible environmental commitment.</h2><p class="body">Companies can sponsor from small tree sets to thousands. The program supports sustainability communication, stakeholder engagement and tangible reforestation initiatives.</p></div>
+      <div class="panel"><div class="list"><div class="item">Starter ESG — 100 trees — €2,500/year</div><div class="item">Growth ESG — 500 trees — €12,500/year</div><div class="item">Flagship ESG — 1,000 trees — €25,000/year</div></div></div>
+    </div></section>
+
+    <section id="adopt"><div class="wrap calc">
+      <div class="panel">
+        <div class="eyebrow">Adopt</div>
+        <h2>Adopt real trees.</h2>
+        <p class="body">Move the slider. Each tree costs €25 per year all-inclusive. Minimum stewardship: 3 years.</p>
+        <input id="trees" class="range" type="range" min="1" max="5000" value="100">
+      </div>
+      <div class="panel">
+        <div class="numbers">
+          <div class="num"><small>Trees</small><b id="treeCount">100</b></div>
+          <div class="num"><small>Yearly</small><b id="yearly">€2,500</b></div>
+          <div class="num"><small>3-year</small><b id="three">€7,500</b></div>
+        </div>
+        <div class="actions"><a class="btn green" href="mailto:hello@sylverra.com?subject=Sylverra adoption request">Request Adoption</a></div>
+      </div>
+    </div></section>
+
+    <section id="projects"><div class="wrap">
+      <div class="eyebrow">Projects</div><h2>Visible land projects, not abstract promises.</h2>
+      <div class="projects">
+        <div class="proj"><div class="projImg" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=65')"></div><div class="projTxt"><h3>Italian Launch Forest</h3><p>Northern Italy land recovery.</p></div></div>
+        <div class="proj"><div class="projImg" style="background-image:url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=900&q=65')"></div><div class="projTxt"><h3>Coastal Regeneration</h3><p>Mediterranean biodiversity recovery.</p></div></div>
+        <div class="proj"><div class="projImg" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=65')"></div><div class="projTxt"><h3>Global Expansion</h3><p>A framework to scale internationally.</p></div></div>
+      </div>
+    </div></section>
+
+    <section id="contact"><div class="wrap">
+      <div class="eyebrow">Contact</div><h2>Grow the planet back.</h2>
+      <p class="body">Start with one tree or build a full corporate program.</p>
+      <div class="actions"><a class="btn" href="mailto:hello@sylverra.com">hello@sylverra.com</a><a class="btn dark" href="#adopt">Calculate adoption</a></div>
+    </div></section>
+  </main>
+  <footer><div class="wrap">© Sylverra — Grow the Planet Back.</div></footer>
+  <script>
+    const slider=document.getElementById('trees'),tc=document.getElementById('treeCount'),yr=document.getElementById('yearly'),th=document.getElementById('three');
+    const fmt=n=>'€'+n.toLocaleString('en-US');
+    function update(){const n=+slider.value;tc.textContent=n.toLocaleString('en-US');yr.textContent=fmt(n*25);th.textContent=fmt(n*25*3)}
+    slider.addEventListener('input',update,{passive:true}); update();
+  </script>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function(){
+      const lat = 44.780351;
+      const lng = 11.586586;
+      const el = document.getElementById('sylverraMap');
+      if(!el || typeof L === 'undefined') return;
+
+      const map = L.map('sylverraMap', {
+        center: [lat, lng],
+        zoom: 17,
+        minZoom: 3,
+        maxZoom: 20,
+        scrollWheelZoom: true,
+        touchZoom: true,
+        dragging: true
+      });
+
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics and the GIS User Community',
+        maxZoom: 20
+      }).addTo(map);
+
+      L.marker([lat, lng]).addTo(map)
+        .bindPopup('<b>First Sylverra Land Plot</b><br>44.780351, 11.586586<br>Future plot code: IT-FE-001')
+        .openPopup();
+
+      L.circle([lat, lng], {
+        radius: 85,
+        color: '#6ee7b7',
+        weight: 2,
+        fillColor: '#6ee7b7',
+        fillOpacity: 0.12
+      }).addTo(map);
+
+      setTimeout(function(){ map.invalidateSize(); }, 400);
+    })();
+  </script>
+
+</body>
+</html>
